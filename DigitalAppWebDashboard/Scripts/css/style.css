@@ -1,0 +1,989 @@
+/*
+    ******** This Cascading style sheet written by team of ux, Logic Valley Technology Pvt Ltd ********
+    
+----------------------------------------------------------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('colors.css');
+
+
+html {
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    background: #f6f7fc;
+    margin: 0;
+    padding: 0px;
+}
+
+/*---------------------------------------
+  1.0 Gentral
+---------------------------------------*/
+
+a, a:hover {
+    text-decoration: none;
+}
+
+
+
+/*---------------------------------------
+  2.0 Nav Bar 
+---------------------------------------*/
+.bg-light {
+    background-color: #ffffff !important;
+    -webkit-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.07);
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.07);
+}
+/*---------------------------------------
+  2.1 Nav Menu icon 
+---------------------------------------*/
+.navbar {
+    padding: 0 !important;
+    z-index: 1;
+}
+.nav_menu_icon {
+    width: 21px;    
+    cursor: pointer;
+}
+.nav_menu_icon div {
+    height: 2px;
+    margin: 0.225rem 0;
+    border-radius: 5px; 
+    background: #ffffff;
+    transition: .3s;
+}
+.nav_menu_icon .one {
+    width: 21px;
+}
+.nav_menu_icon .two {
+    width: 13px;
+}
+.nav_menu_icon .three {
+    width: 17px;
+}
+.nav_menu_icon:hover div {
+    width: 21px;   
+}
+.nav_brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #ffffff;
+    width: 35px;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+.navbar-light .navbar-brand {
+    color: #ffffff;
+}
+
+/*---------------------------------------
+  2.2 Nav bar contents 
+---------------------------------------*/
+
+.nav_contents {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+/*---------------------------------------
+  2.3 Nav bar search 
+---------------------------------------*/
+.nav_search {
+    padding-right: 30px;
+}
+.nav_search .form-group {
+    margin: 0;
+    width: 245px;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+    font-size: .9rem;
+    border-radius: 30px;
+    border: 1px solid #ced4da;
+}
+
+.has-search .form-control-search-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    line-height: 2.015rem;
+    text-align: center;
+    pointer-events: none;
+    color: #c5c5c5;
+    font-size: 1rem;
+}
+
+/*---------------------------------------
+  2.4 Nav bar controls 
+---------------------------------------*/
+.nav-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav-controls .user {
+    height: 30px;
+    margin-right: 18px;    
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav-controls .user .title {
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.nav-controls .user img {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border-radius: 15px;
+}
+
+.nav-controls .icons_list {
+    width: 30px;
+    margin-right: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;    
+    color: #c5c5c5;
+    position: relative;
+}
+.nav-controls .icons_list i {
+    font-size: 1.3rem;
+}
+.nav-controls .icons_list .badge-dot{
+    width: 10px;
+    height: 10px;
+    background: var(--theme_color);
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    border: 2px solid #fff;
+}
+
+.nav-dropdown {
+    width: 215px;
+    background: #ffffff;
+    min-height: 100px;
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    right: -20px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    display: none;
+}
+.nav-dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-dropdown ul li {    
+    padding: 7px 10px;    
+}
+.nav-dropdown ul li:nth-child(even) {    
+    padding: 7px 10px;
+    background: rgba(108, 53, 103, 0.15);
+}
+.nav-dropdown ul li:hover {
+    background: #eceaea;    
+}
+.nav-dropdown ul li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;   
+}
+.nav-dropdown ul li p {
+    margin: 0;
+    padding: 0;
+}
+.nav-dropdown .headline {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #636363;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-dropdown .subline {
+    font-size: 0.6rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.nav-dropdown .head-title{
+    background: var(--theme_color);
+    color: #ffffff;
+    padding: 7px 10px;
+    font-size: 0.9rem;
+}
+
+.nav-user-dropdown {
+    width: 165px;
+    background: #ffffff;
+    position: absolute;
+    top: 43px;
+    z-index: 1;
+    right: -21px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    display: none;
+    
+}
+.nav-user-dropdown ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-user-dropdown ul li {
+    padding: 8px 21px;    
+}
+.nav-user-dropdown ul li:hover {
+    background: #eceaea;    
+}
+.nav-user-dropdown ul li i {
+    margin-right: 7px;    
+}
+
+.open {
+    display: block;
+}
+
+/*---------------------------------------
+  3.0 Side Bar 
+---------------------------------------*/
+.sidebar {
+    background: #ffffff;
+    width: auto;
+    z-index: 1;
+    -webkit-box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.07);
+    box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.07);
+    position: relative;
+}
+
+.sidebar_title {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.sidebar .menu {
+    
+}
+.sidebar .menu li {
+    padding: 10px 0px 10px 17px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding-right: 10px;
+    color: #6a737c;
+}
+.sidebar .menu .menu_link {
+    display: none;
+    width: 190px;
+}
+.sidebar .menu:hover .menu_link {
+    display: flex;
+    font-size: .75rem;
+    font-weight: 400;
+}
+.sidebar .menu .menu_link a {
+    color: #6a737c;
+    font-weight: 600;
+}
+.sidebar .menu li.active,
+.sidebar .menu li:hover,
+.sidebar .menu li:hover a {
+    background: #eaeaea;
+    color: var(--theme_color);
+}
+
+.sidebar .menu li i {
+    padding-right:  10px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .menu li .sub-menu {
+    display: none;    
+}
+.sidebar .menu li .sub-menu-o {
+    display: block;    
+}
+.sidebar .menu li ul {
+    padding-left: 21px;
+}
+.sidebar .menu li .sub-menu li {
+    list-style: none;    
+}
+
+/*---------------------------------------
+  4.0 Main wrap
+---------------------------------------*/
+.main_wrap {
+    display: flex;
+    flex-direction: row;    
+}
+
+/*---------------------------------------
+  4.1 Dashboard Content 
+---------------------------------------*/
+.dash_wrap {
+    height: calc(100vh - 56px);
+    flex: 1 1 auto;
+    padding: 1.5rem 1rem 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*---------------------------------------
+  4.2 Dashboard Top
+---------------------------------------*/
+.dash_wrap .dash_title_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.dash_wrap .dash_title_wrap .left_cnt,
+.dash_wrap .dash_title_wrap .right_cnt {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.dash_wrap .dash_title_wrap .left_cnt .icon {
+/*    background: #2567f8;*/
+    width: 45px;
+    height: 45px;
+    align-items: center;
+/*    color: #fff;*/
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.dash_wrap .dash_title_wrap .left_cnt .titles h5,
+.dash_wrap .dash_title_wrap .left_cnt .titles p {
+    margin: 0;
+}
+.dash_wrap .dash_title_wrap .left_cnt .titles h5 {
+    font-weight: 700;
+}
+
+/*---------------------------------------
+  4.3 Dashboard Cards 
+---------------------------------------*/
+.main_cards .card {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    min-height: 245px;    
+}
+.task_option_icon {
+    margin-top: -10px;
+}
+.dash_content_wrap .task_option_icon img {
+    height: 21px;
+    cursor: pointer;
+}
+.task_option_menu {
+    min-width: 141px;
+    background: #ffffff;
+    position: relative;    
+    padding: 10px 0;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+}
+.task_option_menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.task_option_menu ul li {
+    padding: 5px 15px;
+}
+.task_option_menu ul li a {
+    color: #1e1e1e;
+}
+.task_option_menu ul li a:hover {
+    text-decoration: none;
+}
+.task_option_menu ul li:hover {
+    background: #f0f0f0;
+}
+.task_option_menu i {
+    color: #663366;
+    margin-right: 7px;
+}
+.dropleft .dropdown-toggle::before {
+    display: none;
+}
+.dropdown-menu {
+    border: 0 !important;
+    padding: 0.2rem 0.1rem;
+}
+
+/*---------------------------------------
+  4.4 Titles 
+---------------------------------------*/
+.title {
+    margin-bottom: 30px;
+}
+/*---------------------------------------
+  4.5 Dashboard from area content 
+---------------------------------------*/
+.dash_form_content {
+    background-color: var(--table_striped);
+    padding: 30px 0 30px 10px;
+    margin-top: -24px;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #ced4da;
+/*    color: #ffffff;*/
+}
+.form_content_controls {
+    display: flex;
+    justify-content: flex-end;
+}
+.form_content_controls i {
+    color: var(--theme_color);
+    font-size: 15px;
+    margin-right: 15px;
+    cursor: pointer
+}
+.form_content_controls i:hover {
+    opacity: .7;
+}
+.ticket_form {
+    margin-top: 15px;
+    padding-right: 15px;
+}
+.dash_form_content .btn-group-lg > .btn, .btn-lg {
+    padding: .4rem 1rem;
+    border-radius: 30px;
+}
+.dash_form_content .form-control {
+    border-radius: 30px;
+    background: transparent;
+    border: 1px solid #ced4da;
+    color: #6a737c;
+    font-size: .9rem;
+}
+
+.dash_form_content .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+
+        /*   ----- Select2 Style   ----*/
+
+.dash_form_content .select2-container .select2-selection--single {
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    border-radius: 27px;
+}
+.dash_form_content .select2-container .select2-selection--single {
+    height: 47px;
+}
+.dash_form_content .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 47px;
+    padding: 0px 16px;
+}
+.dash_form_content .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-left: -10px;
+    margin-top: 7px;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background: var(--theme_color);
+}
+.select2-dropdown {
+    background-color: var(--table_striped);
+}
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    border: 1px solid #aaa;
+    background: transparent;
+    border-radius: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.select2-results li {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.select2-search--dropdown::after {
+    font-family: FontAwesome;
+    content: "\f002";
+    float: right;
+    margin-top: -23px;
+    margin-right: 10px;
+    color: #6a737c;
+}
+span.select2 {
+    width: 100% !important;
+}
+
+/*---------------------------------------
+  4.6 Forms Entries
+---------------------------------------*/
+
+.form_entry {
+    padding: 3rem 3rem 1.5rem;
+    border: 1.5px dotted #6c757d;
+    margin-top: 18px;
+}
+.form_entry .form-group {
+    margin-bottom: 1.5rem;
+}
+.form_entry .form-control {
+    background: transparent;
+}
+.form_entry .form-control:focus {    
+    background: transparent;
+}
+
+.form_entry .form-group label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    background: #f6f7fc;
+    padding: 0 5px;
+    z-index: 15;
+}
+.form_entry .form-control::placeholder {
+    opacity: 0;
+}
+.form_entry .form-group .custom-select {
+    width: 100% !important;
+    background: transparent;
+}
+.bigdrop {
+    width: 100%;
+}
+.form_entry .form-group .custom-select option {
+    background:  #f6f7fc;
+}
+.form_entry .form-group .custom-select:focus {
+    border-color:  var(--theme_color);
+    box-shadow: none;
+}
+.form_entry .form-control:focus {
+    border-color:  var(--theme_color);
+    box-shadow: none;
+    color: #495057;
+    background-color: transparent;
+}
+.form_entry .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15) !important;
+}
+
+.form_entry-btn-group {
+    padding: 3rem 0rem 1.5rem;
+}
+.form_entry-calendar {
+    padding: 3rem 3rem 1.5rem;
+    border: 1.5px dotted #6c757d;
+    margin-top: 18px;
+}
+.form_entry-calendar .datepicker td, .form_entry-calendar .datepicker th,
+.form_entry-calendar .datepicker td, .datepicker th {
+    font-size: 0.9rem;
+    padding: 15px 0px 15px 0px;
+}
+
+.form_entry ._multiple {
+    padding-top: 10px;
+}
+
+.form_entry ._multiple option {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.form_entry .form-check-label {
+    top: 0 !important;
+    margin-top: 3px;
+}
+
+/*---------------------------------------
+  5.1 Forms
+---------------------------------------*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border: 1px solid;
+    box-shadow: none;
+    border-color: var(--theme_color);
+/*
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+*/
+  outline: 0 none;
+}
+
+.form-control {
+   
+}
+.dash_form_content .form-control:focus {
+    background-color: transparent;
+    border-color: #80bdff;    
+    border: 1px solid #6a737c;
+    color: #6a737c;
+}
+
+.dash_form_content .form-label-group > label {
+    color: #6a737c;
+}
+
+.custom-select option {
+    background: #f6f7fc;    
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 10px);
+}
+
+/*----------------------------------------------------
+  5.2 Date Picker
+----------------------------------------------------*/
+
+.sidebar_calendar{
+    margin-top: 15px;
+    min-height: 240px;
+    max-height: 240px;
+}
+.datepicker {
+    border-radius: 0;   
+}
+.bootstrap-datetimepicker-widget table {
+    width: 90%;
+    margin: 0 auto;
+}
+.datepicker td, .datepicker th {
+    font-size: 0.7rem;
+    padding: 5px 0px 5px 0px;
+}
+
+.bootstrap-datetimepicker-widget table td.active.today::before {
+    border-bottom-color: var(--theme_color);
+}
+.datepicker table tr td.active.active {
+    background: transparent !important;
+    color: var(--theme_color);
+}
+.datepicker table tr td.active, .datepicker table tr td.active:hover, 
+.datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+    color: var(--theme_color) !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    width: 20px !important;
+    background: #e9ecef !important;
+}
+.bootstrap-datetimepicker-widget table td.today::before {
+    border-bottom-color: var(--theme_color) !important;
+}
+
+.bootstrap-datetimepicker-widget table td.today {
+    color:  var(--theme_color) !important;
+}
+
+.datepicker .datepicker-switch {
+
+    width: 145px;
+    font-size: 0.9rem;
+    font-weight: 400;
+
+}
+.datepicker th {
+    color: #212529;
+}
+.datepicker th {
+    background: transparent !important;
+}
+.datepicker th.dow {
+    color: var(--theme_color) !important;
+}
+
+.datepicker-dropdown::after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-top: 0;
+    position: absolute;
+}
+.datepicker td, .datepicker th {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: none;
+}
+.datepicker table tr td.active.active {
+    background: var(--theme_color);
+}
+
+.datepicker table tr td.active, .datepicker table tr td.active:hover, .datepicker table tr td.active.disabled, .datepicker table tr td.active.disabled:hover {
+    background-color: var(--theme_color);
+    background-image: -moz-linear-gradient(to bottom, transparent, transparent);
+    background-image: -ms-linear-gradient(to bottom, transparent, transparent);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(transparent));
+    background-image: -webkit-linear-gradient(to bottom, transparent, transparent);
+    background-image: -o-linear-gradient(to bottom, transparent, transparent);
+    background-image: linear-gradient(to bottom, transparent, transparent);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='transparent', endColorstr='transparent', GradientType=0);
+    border-color: transparent transparent transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.datepicker table tr td.today:hover {
+    background: #e9ecef !important;
+    color: var(--theme_color) !important;
+    width: 20px;
+    height: 20px;
+}
+
+.datepicker .table thead th {
+    border-bottom: 0;
+}
+
+.embeded_date {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.18);
+    background: var(--theme_color);
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.embeded_date .item {
+    flex: ;
+    padding: 15px;    
+    
+}
+.embeded_date .item .datepicker {
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.0);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.0);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.0);
+}
+
+/*----------------------------------------------------
+  5.2.1 Date Picker Holidays
+----------------------------------------------------*/
+._holidays {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 20px;
+}
+._holidays .week_end_holiday,
+._holidays .non_week_end_holiday {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px;
+    margin-bottom: 4px;
+}
+._holidays ._indicator {
+    width: 15px;
+    height: 15px;
+    background: red;
+    margin-right: 7px;
+}
+._holidays .week_end_holiday ._indicator {
+    background-color: #F20505;
+}
+._holidays .non_week_end_holiday ._indicator {
+    background-color: #09A603;
+}
+.weekend {
+    color: #F20505;
+}
+.holidays {
+    color: #09A603 !important;
+}
+
+
+/*---------------------------------------
+  5.3 Data Table
+---------------------------------------*/
+
+.dataTables_wrapper .form-control {
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+.dataTables_wrapper .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+}
+
+.dataTables_wrapper select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + -5px);
+}
+.dataTables_wrapper .custom-select{
+    border-radius: 6px;
+}
+.dataTables_wrapper .custom-select option {
+    background: #fff;
+}
+
+
+.table-striped thead {
+    background: var(--theme_color);
+    color: #ffffff;
+}
+.table-striped thead th {
+    padding: .75rem;
+}
+.table td, .table th {
+    border: 0;
+    padding: .5rem .75rem;
+}
+.table-striped tbody tr:nth-of-type(2n+1) {
+    background-color: transparent;
+}
+.table-striped tbody tr:nth-of-type(2n+2) {
+    background-color: var(--table_striped);
+}
+.page-link {
+    color:  var(--theme_color);
+}
+.page-link:hover {
+    color: var(--theme_color);
+}
+.page-item.active .page-link {
+    background-color: var(--theme_color);
+    border-color: var(--theme_color);
+}
+.table td i {
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.table ._inprogress,
+.table ._completed,
+.table ._inactive {
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+.table ._completed {
+    background: #28a745;
+}
+.table ._inprogress {
+    background:  var(--theme_color);
+}
+.table ._inactive {
+    background: #dc3545;
+}
+
+/*---------------------------------------
+  5.4 Buttons
+---------------------------------------*/
+.btn-secondary {
+    background-color: var(--secondary_color);
+    border-color:  var(--secondary_color);
+}
+.btn-secondary:hover {
+    background-color: var(--secondary_color);
+    border-color:  var(--secondary_color);
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+    background-color: var(--secondary_color);
+    border-color:  var(--secondary_color);
+}
+
+/*---------------------------------------
+  6.0 Footer
+---------------------------------------*/
+.footer {
+    align-self: flex-end;
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: 0px;
+    padding: 15px 15px 1px 15px;
+}
+
+
+/*---------------------------------------
+  0.0 Small Devices
+---------------------------------------*/
+
+@media only screen and (max-width: 768px){
+    .sidebar {
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px){
+    .nav_brand {
+        width: 100%;
+    }
+    .sidebar {
+        position: fixed;
+        top: 56px;
+        bottom: 0;
+        width: 100%;
+        z-index: 2;
+    }
+}

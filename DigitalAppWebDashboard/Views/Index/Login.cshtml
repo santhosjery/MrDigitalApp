@@ -1,0 +1,59 @@
+﻿@model DomainModel.AppUser.UserLogin
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+@using (Ajax.BeginForm("LoginUser", "Index", new AjaxOptions
+{
+    HttpMethod = "Post",
+    UpdateTargetId = "spanValidationMessage"
+}))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+                                 
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                       <span class="input-group-text" id="basic-addon1"><i class="fa fa-mobile" style="font-size:30px;color:blue" aria-hidden="true"></i></span>
+            </div>
+            @Html.TextBoxFor(model => model.MobileNumber, new { @class = "form-control", placeholder = "Enter your mobile number" })
+            
+        </div>
+        <div class="input-group mb-3">
+            <span id="spanValidationMessage"><i style="font-weight: 800;font-size: 13px;color:red;padding-left: 100px;" aria-hidden="true">Invalid mobile number</i></span>
+        </div>
+
+        <p>
+            <input type="submit" id="btnLogin" class="btn btn-primary btn-block" value="Submit" />
+        </p>
+}
+
+<div class="modal modal-dialog cascading-modal modal-avatar modal-sm" role="document" id="modalOTP">
+      <!--Content-->
+      <div class="modal-content">
+
+        <!--Header-->
+        <div class="modal-header">
+          <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%281%29.jpg" class="rounded-circle img-responsive" alt="Avatar photo">
+        </div>
+        <!--Body-->
+        <div class="modal-body text-center mb-1">
+
+          <h5 class="mt-1 mb-2">Maria Doe</h5>
+
+          <div class="md-form ml-0 mr-0">
+            <input type="password" id="form1" class="form-control ml-0">
+            <label for="form1" class="ml-0">Enter password</label>
+          </div>
+
+          <div class="text-center mt-4">
+            <button class="btn btn-cyan waves-effect waves-light">Login
+              <i class="fas fa-sign-in ml-1"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <!--/.Content-->
+</div>

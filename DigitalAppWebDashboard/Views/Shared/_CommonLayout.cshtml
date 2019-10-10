@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/scripts/cssfiles")
+    @Scripts.Render("~/scripts/jsjquery")
+</head>
+<body>
+          <!-- Nav bar -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="nav_brand">
+                 <a class="navbar-brand" href="#">
+                    <img src="~/Content/Images/lv_logo.png" height="30" class="d-inline-block align-top" alt=""></a>                    
+            </div>
+            <div class="nav_contents">
+                <div class="nav_search">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-search-icon"></span>
+                        <input type="text" class="form-control" placeholder="Type in to search...">
+                      </div>
+                </div>
+                <div class="nav-controls">
+                    <div class="user">
+                        <span class="title">Frederick</span> 
+                        <img src="~/Content/Images/user6.jpg">
+                        <div class="nav-user-dropdown">
+                            <ul>
+                                <li><i class="fa fa-cog" aria-hidden="true"></i>Settings</li>
+                                <li id="logOut"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="icons_list" id="notification-btn" >
+                        <i class="fa fa-bell-o" aria-hidden="true"></i>
+                        <div class="badge-dot"></div>
+                        <div class="nav-dropdown notification">
+                            <div class="head-title">Notification</div>
+                            <ul>
+                                <li>
+                                    <div class="headline">Jacob accepted your invites</div> 
+                                    <p class="subline">1 Hour ago</p>
+                                </li>
+                                 <li>
+                                    <div class="headline">Reuben accepted your invites</div> 
+                                    <p class="subline">5 Hour ago</p>
+                                </li>
+                                 <li>
+                                    <div class="headline">Mohammad accepted your invites</div> 
+                                    <p class="subline">Yesterday</p>
+                                </li>
+                                <li>
+                                    <div class="headline">David accepted your invites</div> 
+                                    <p class="subline">Yesterday</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+        </nav>
+      
+     
+      <!-- Main wrap -->
+      <div class="main_wrap">          
+          <!-- Nav bar -->
+          <div class="sidebar">
+              <ul class="list-unstyled menu">
+                <li class="active">
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                    <div class="menu_link"><a href="Ticket Entry.html">Save New</a></div>
+                </li>
+                <li>
+                    <i class="fa fa-ticket" aria-hidden="true"></i>
+                    <div class="menu_link"><a href="index.html">Ticket List</a></div>
+                </li>
+                <li>
+                    <i class="flaticon-user"></i>
+                    <div class="menu_link"><a href="users.html">User</a></div>
+                </li>
+                <li>
+                    <i class="flaticon-users"></i>
+                    <div class="menu_link"><a href="User_list.html">User List</a></div>
+                </li>
+                <li>
+                    <i class="flaticon-dept-mgnt"></i>
+                    <div class="menu_link"><a href="Dept_Management.html">Dept Mgnt</a></div>
+                </li>
+                <li>
+                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                    <div class="menu_link"><a href="Task_Management.html">Task Mgnt</a></div></li>
+                <li>
+                    <i class="flaticon-task-list"></i>
+                    <div class="menu_link"><a href="Task_Management_List.html">Task List</a></div>
+                </li>
+                <li>
+                    <i class="flaticon-project-list"></i>
+                    <div class="menu_link"><a href="Project_Management_List.html">Project List</a></div>
+                </li>
+              </ul>                        
+              
+          </div>
+          
+	  <div class="dash_wrap">
+          @RenderBody()
+	  <div class="footer"> <!-- Footer -->
+				<p class="text-right">Powered by Logic Valley</p> 
+		  </div>
+	  </div>
+      </div>
+
+@Scripts.Render("~/scripts/jsfiles")
+
+</body>
+</html>

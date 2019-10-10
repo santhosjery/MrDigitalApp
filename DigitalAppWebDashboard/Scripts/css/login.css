@@ -1,0 +1,158 @@
+/*
+    ******** This Cascading style sheet written by team of ux, Logic Valley Technology Pvt Ltd ********
+    
+----------------------------------------------------------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('colors.css');
+
+
+html {
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    background: #f6f7fc;
+    margin: 0;
+    padding: 0px;
+}
+
+/*---------------------------------------
+  1.0 Gentral
+---------------------------------------*/
+a {
+    color: #212529 !important;
+}
+
+
+.main-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background: url(../../Content/images/login_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    justify-content: flex-end;
+}
+.cont-wrap {
+    width: 30%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.login {
+    width: 100%;
+    padding: 25% 15%;   
+    background: #ffffff80;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+    
+}
+
+.auth_title {
+    margin: 10px auto 60px;
+}
+
+.auth_signup {
+    margin-top: 60px;
+}
+
+/*---------------------------------------
+  5.1 Forms
+---------------------------------------*/
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border: 1 var(--theme_color) solid !important;
+    box-shadow: none;
+    border-color: var(--theme_color);
+
+/*
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6);
+*/
+    
+    background-color: #efefef;
+
+  outline: 0 none;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .475rem .85rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #efefef;
+    background-clip: padding-box;
+    border: 0px solid #ced4da;
+    border-radius: 0;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.input-group-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-radius: 0;
+}
+
+form .btn {
+    border-radius: 30px;
+}
+.login form {
+    margin-bottom: 30px;
+}
+
+/*---------------------------------------
+  0.0 Small Devices
+---------------------------------------*/
+
+@media only screen and (max-width: 768px){
+    .cont-wrap {
+        width: 100%;
+        padding: 10%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+    }
+
+}
